@@ -37,6 +37,8 @@ public class GameplayScreen extends AbstractScreen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
 
+                player.reactOnClick();
+
                 System.out.println("CLICK");
                 return super.touchDown(event, x, y, pointer, button);
             }
@@ -47,8 +49,6 @@ public class GameplayScreen extends AbstractScreen {
     private void initPlayer() {
         player = new Player();
         stage.addActor(player);
-
-
     }
 
     @Override

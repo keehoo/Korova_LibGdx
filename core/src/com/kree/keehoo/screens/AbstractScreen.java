@@ -2,7 +2,6 @@ package com.kree.keehoo.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -26,7 +25,7 @@ public abstract class AbstractScreen implements Screen {
         stage = new Stage(new StretchViewport(MyGdxGame.WIDTH, MyGdxGame.HEIGHT, camera));
         spriteBatch = new SpriteBatch();
         Gdx.input.setInputProcessor(stage);
-        init();
+
     }
 
     protected abstract void init();
@@ -73,9 +72,9 @@ public abstract class AbstractScreen implements Screen {
     }
 
 
-
     @Override
-    public void show() {}
+    public void show() {
+    }
 
     @Override
     public void resize(int width, int height) {
