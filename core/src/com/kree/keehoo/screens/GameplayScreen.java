@@ -12,7 +12,9 @@ private Player player;
         init();
     }
 
-    private void init() {
+
+    @Override
+    protected void init() {
         initPlayer();
     }
 
