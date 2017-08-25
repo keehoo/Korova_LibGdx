@@ -8,14 +8,14 @@ public class MyGdxGame extends Game {
 
     public static final String title = "Game Title";
 
-    public static final int WIDTH = 480;
-    public static final int HEIGHT = 700;
+    public static final int WIDTH = 805;
+    public static final int HEIGHT = 648;
 
     private boolean paused;
 
 //
 
-    Texture img;
+   // Texture img;
 
     @Override
     public void create() {

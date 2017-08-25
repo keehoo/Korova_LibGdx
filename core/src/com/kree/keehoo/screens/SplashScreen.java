@@ -7,7 +7,7 @@ import com.kree.keehoo.MyGdxGame;
 
 public class SplashScreen extends AbstractScreen {
 
-    private static final int DELAY_SECONDS = 1;
+    private static final int DELAY_SECONDS = 5;
     private Texture splashImage;
 
     public SplashScreen(final MyGdxGame game) {
@@ -26,7 +26,7 @@ public class SplashScreen extends AbstractScreen {
     @Override
     protected void init() {
         //TODO: implement better assets loading when game grows
-        splashImage = new Texture("badlogic.jpg");
+        splashImage = new Texture("u118_normal.png");
     }
 
     @Override
@@ -35,7 +35,7 @@ public class SplashScreen extends AbstractScreen {
 
         spriteBatch.begin();
 
-        spriteBatch.draw(splashImage, 0, 0);
+        spriteBatch.draw(splashImage, MyGdxGame.WIDTH/2 - splashImage.getWidth()/2, MyGdxGame.HEIGHT/2 - splashImage.getHeight()/2) ;
 
         spriteBatch.end();
     }
