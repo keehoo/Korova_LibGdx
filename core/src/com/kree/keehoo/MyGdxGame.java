@@ -14,7 +14,7 @@ public class MyGdxGame extends Game {
 
     private boolean paused;
 
-    Music music_level1;
+    private Music music_level1;
 
 //
 

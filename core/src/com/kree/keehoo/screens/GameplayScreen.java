@@ -9,6 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
 import com.kree.keehoo.entities.InstructionsMonit;
 import com.kree.keehoo.entities.Plama1;
+import com.kree.keehoo.entities.buttons.BatteryButton;
 import com.kree.keehoo.entities.buttons.OkButton;
 import com.kree.keehoo.entities.buttons.StrawberryButton;
 
@@ -36,6 +37,13 @@ public class GameplayScreen extends AbstractScreen {
     private void initButtons() {
         initOkButton();
         initStrawberry();
+        initBattery();
+
+    }
+
+    private void initBattery() {
+        BatteryButton batteryButton = new BatteryButton();
+        stage.addActor(batteryButton);
     }
 
     private void initStrawberry() {

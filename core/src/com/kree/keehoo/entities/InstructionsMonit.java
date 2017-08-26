@@ -33,6 +33,7 @@ public class InstructionsMonit extends Image {
     }
 
     private void clodeMonit() {
+        //TODO: Add fade out with alpha
         this.remove();
     }
 }
