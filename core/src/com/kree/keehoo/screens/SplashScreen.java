@@ -32,7 +32,6 @@ public class SplashScreen extends AbstractScreen {
 
     @Override
     public void render(float delta) {
-        System.out.println("SplashScreen render()");
         super.render(delta);
 
         spriteBatch.begin();

@@ -13,6 +13,7 @@ import com.kree.keehoo.entities.InstructionsMonit;
 import com.kree.keehoo.entities.Plama1;
 import com.kree.keehoo.entities.Player;
 import com.kree.keehoo.entities.buttons.OkButton;
+import com.kree.keehoo.entities.buttons.StrawberryButton;
 
 public class GameplayScreen extends AbstractScreen {
 
@@ -36,6 +37,12 @@ public class GameplayScreen extends AbstractScreen {
 
     private void initButtons() {
         initOkButton();
+        initStrawberry();
+    }
+
+    private void initStrawberry() {
+        StrawberryButton strawberryButton = new StrawberryButton();
+        stage.addActor(strawberryButton);
     }
 
     private void initBackgroundImage() {
