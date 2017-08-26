@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.kree.keehoo.MyGdxGame;
@@ -15,6 +16,8 @@ public abstract class AbstractScreen implements Screen {
     protected MyGdxGame game;
 
     protected Stage stage;
+
+    protected Image background;
 
     private OrthographicCamera camera;
 
