@@ -32,6 +32,8 @@ public abstract class AbstractScreen implements Screen {
     protected abstract void init();
 
     protected void createCamera() {
+        System.out.println("Create Camera");
+
         camera = new OrthographicCamera();
         camera.setToOrtho(false, MyGdxGame.WIDTH, MyGdxGame.HEIGHT);
         camera.update();
@@ -39,6 +41,7 @@ public abstract class AbstractScreen implements Screen {
 
     @Override
     public void render(float delta) {
+      //  System.out.println("Abstract render()");
         clearScreen();
         camera.update();
         spriteBatch.setProjectionMatrix(camera.combined);

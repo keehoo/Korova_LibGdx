@@ -13,6 +13,7 @@ public class SplashScreen extends AbstractScreen {
     public SplashScreen(final MyGdxGame game) {
         super(game);
         init();
+        System.out.println("Splashscreen constructor");
 
         Timer.schedule(new Task() {
             @Override
@@ -31,6 +32,7 @@ public class SplashScreen extends AbstractScreen {
 
     @Override
     public void render(float delta) {
+        System.out.println("SplashScreen render()");
         super.render(delta);
 
         spriteBatch.begin();
