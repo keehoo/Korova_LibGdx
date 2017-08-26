@@ -9,8 +9,10 @@ import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
 import com.kree.keehoo.entities.InstructionsMonit;
 import com.kree.keehoo.entities.Other.Stomach;
+import com.kree.keehoo.entities.Other.StomachComparator;
 import com.kree.keehoo.entities.Plama1;
 import com.kree.keehoo.entities.buttons.BatteryButton;
+import com.kree.keehoo.entities.buttons.GreenHandleButton;
 import com.kree.keehoo.entities.buttons.OkButton;
 import com.kree.keehoo.entities.buttons.StrawberryButton;
 
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 public class GameplayScreen extends AbstractScreen {
 
     public Stomach stomach;
+    private StomachComparator stomachComparator;
 
     public GameplayScreen(MyGdxGame game) {
         super(game);
@@ -37,6 +40,7 @@ public class GameplayScreen extends AbstractScreen {
     private void initStomach() {
         System.out.println("Initializing stomach");
         stomach = new Stomach();
+        stomachComparator = new StomachComparator();
     }
 
     private void showInstructions() {
@@ -87,7 +91,9 @@ public class GameplayScreen extends AbstractScreen {
                 switch (stomach.isStomachFull()) {
                     case 0:
                         System.out.println("Stomach is full, show result!");
-                        showResult();
+                        if (stomachComparator.compare()) {
+                            showResult();
+                        }
                         break;
                     case 1:
                         System.out.println("Stomach not full");
@@ -114,6 +120,15 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     private void showResult() {
+        showGreenHandleButton();
+
+
+    }
+
+    private void showGreenHandleButton() {
+        GreenHandleButton greenHandleButton = new GreenHandleButton(this);
+        stage.addActor(greenHandleButton);
+        greenHandleButton.setZIndex(0);
 
     }
 
@@ -138,5 +153,9 @@ public class GameplayScreen extends AbstractScreen {
             return stomach;
         }
         return new Stomach();
+    }
+
+    public void showArrowAndGloveButton() {
+
     }
 }
