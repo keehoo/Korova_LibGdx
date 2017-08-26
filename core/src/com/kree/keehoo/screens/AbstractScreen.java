@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.kree.keehoo.MyGdxGame;
 
 public abstract class AbstractScreen implements Screen {
@@ -44,7 +43,7 @@ public abstract class AbstractScreen implements Screen {
 
     @Override
     public void render(float delta) {
-      //  System.out.println("Abstract render()");
+        //  System.out.println("Abstract render()");
         clearScreen();
         camera.update();
         spriteBatch.setProjectionMatrix(camera.combined);

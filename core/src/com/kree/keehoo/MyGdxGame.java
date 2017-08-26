@@ -1,7 +1,6 @@
 package com.kree.keehoo;
 
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.graphics.Texture;
 import com.kree.keehoo.screens.SplashScreen;
 
 public class MyGdxGame extends Game {
@@ -15,7 +14,7 @@ public class MyGdxGame extends Game {
 
 //
 
-   // Texture img;
+    // Texture img;
 
     @Override
     public void create() {

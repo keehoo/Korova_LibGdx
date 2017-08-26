@@ -13,7 +13,7 @@ public class StrawberryButton extends AbstractIngredientButton {
     private static final int HEIGHT = 56;
     private static final int Y = 500;
     private static final int X = 500;
-    private final String value = "strawberry";
+    public final String value = "strawberry";
     private static final String STRAWBERRY = "truskawka_u99_normal.png";
 
     public StrawberryButton() {
@@ -25,18 +25,21 @@ public class StrawberryButton extends AbstractIngredientButton {
         setHeight(HEIGHT);
 
         this.addListener(new ClickListener() {
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                System.out.println("CLICKED OK STRAWBERRY");
-                System.out.println("X: " + x);
-                System.out.println("Y: " + y);
-
-                return super.touchDown(event, x, y, pointer, button);
-            }
+                             @Override
+                             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                                 System.out.println("CLICKED OK STRAWBERRY");
+                                 System.out.println("X: " + x);
+                                 System.out.println("Y: " + y);
+                                 return super.touchDown(event, x, y, pointer, button);
+                             }
                          }
 
 
-        ) ;
+        );
 
+    }
+
+    public void removeListener() {
+        this.clearListeners();
     }
 }

@@ -36,7 +36,7 @@ public class SplashScreen extends AbstractScreen {
 
         spriteBatch.begin();
 
-        spriteBatch.draw(splashImage, MyGdxGame.WIDTH/2 - splashImage.getWidth()/2, MyGdxGame.HEIGHT/2 - splashImage.getHeight()/2) ;
+        spriteBatch.draw(splashImage, MyGdxGame.WIDTH / 2 - splashImage.getWidth() / 2, MyGdxGame.HEIGHT / 2 - splashImage.getHeight() / 2);
 
         spriteBatch.end();
     }

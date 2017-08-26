@@ -12,7 +12,7 @@ public class Plama1 extends Image {
         super(new Texture(U_65_NORMAL));
 
         this.setX(MyGdxGame.WIDTH * 0.1f);
-        this.setY(MyGdxGame.HEIGHT* 0.6f);
+        this.setY(MyGdxGame.HEIGHT * 0.6f);
         this.setZIndex(0);
     }
 }
