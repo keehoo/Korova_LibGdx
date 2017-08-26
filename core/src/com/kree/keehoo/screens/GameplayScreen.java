@@ -3,15 +3,12 @@ package com.kree.keehoo.screens;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
 import com.kree.keehoo.entities.InstructionsMonit;
 import com.kree.keehoo.entities.Plama1;
-import com.kree.keehoo.entities.Player;
 import com.kree.keehoo.entities.buttons.OkButton;
 import com.kree.keehoo.entities.buttons.StrawberryButton;
 
@@ -26,13 +23,14 @@ public class GameplayScreen extends AbstractScreen {
     protected void init() {
         System.out.println("Gameplayscreen init method");
         initBackgroundImage();
-        // TODO: Learn how to best display the instructions.... showInstructions();
         initButtons();
+        showInstructions();
     }
 
     private void showInstructions() {
-        InstructionsMonit instructionsMonit = new InstructionsMonit(stage);
+        InstructionsMonit instructionsMonit = new InstructionsMonit();
         stage.addActor(instructionsMonit);
+
     }
 
     private void initButtons() {
