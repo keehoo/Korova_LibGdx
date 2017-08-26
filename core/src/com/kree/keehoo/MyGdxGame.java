@@ -1,6 +1,8 @@
 package com.kree.keehoo;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Music;
 import com.kree.keehoo.screens.SplashScreen;
 
 public class MyGdxGame extends Game {
@@ -12,6 +14,8 @@ public class MyGdxGame extends Game {
 
     private boolean paused;
 
+    Music music_level1;
+
 //
 
     // Texture img;
@@ -19,6 +23,9 @@ public class MyGdxGame extends Game {
     @Override
     public void create() {
         this.setScreen(new SplashScreen(this));
+        music_level1 = Gdx.audio.newMusic(Gdx.files.internal("funeral.ogg"));
+        music_level1.setLooping(true);
+        music_level1.play();
     }
 
     /*
