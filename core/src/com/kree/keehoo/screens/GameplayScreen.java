@@ -8,12 +8,17 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
 import com.kree.keehoo.entities.InstructionsMonit;
+import com.kree.keehoo.entities.Other.Stomach;
 import com.kree.keehoo.entities.Plama1;
 import com.kree.keehoo.entities.buttons.BatteryButton;
 import com.kree.keehoo.entities.buttons.OkButton;
 import com.kree.keehoo.entities.buttons.StrawberryButton;
 
+import java.util.ArrayList;
+
 public class GameplayScreen extends AbstractScreen {
+
+    public Stomach stomach;
 
     public GameplayScreen(MyGdxGame game) {
         super(game);
@@ -23,9 +28,15 @@ public class GameplayScreen extends AbstractScreen {
     @Override
     protected void init() {
         System.out.println("Gameplayscreen init method");
+        initStomach();
         initBackgroundImage();
         initButtons();
         showInstructions();
+    }
+
+    private void initStomach() {
+        System.out.println("Initializing stomach");
+        stomach = new Stomach();
     }
 
     private void showInstructions() {
@@ -42,7 +53,7 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     private void initBattery() {
-        BatteryButton batteryButton = new BatteryButton();
+        BatteryButton batteryButton = new BatteryButton(getStomach());
         stage.addActor(batteryButton);
     }
 
@@ -73,11 +84,37 @@ public class GameplayScreen extends AbstractScreen {
                 System.out.println("CLICKED OK BUTTON");
                 System.out.println("X: " + x);
                 System.out.println("Y: " + y);
+                switch (stomach.isStomachFull()) {
+                    case 0:
+                        System.out.println("Stomach is full, show result!");
+                        showResult();
+                        break;
+                    case 1:
+                        System.out.println("Stomach not full");
+                        showStomachNotFullYet();
+                        break;
+                    case 2:
+                        System.out.println("Fifth chamber not installed");
+                        fifthChamberNotInstalled();
+                        break;
+                }
 
 
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
+    }
+
+    private void fifthChamberNotInstalled() {
+
+    }
+
+    private void showStomachNotFullYet() {
+
+    }
+
+    private void showResult() {
+
     }
 
     @Override
@@ -94,5 +131,12 @@ public class GameplayScreen extends AbstractScreen {
         //System.out.println("Gameplayscreen update()");
         stage.act();
 
+    }
+
+    public Stomach getStomach() {
+        if (stomach != null) {
+            return stomach;
+        }
+        return new Stomach();
     }
 }

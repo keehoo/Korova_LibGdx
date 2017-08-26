@@ -33,8 +33,6 @@ public class StrawberryButton extends AbstractIngredientButton {
                                  return super.touchDown(event, x, y, pointer, button);
                              }
                          }
-
-
         );
 
     }

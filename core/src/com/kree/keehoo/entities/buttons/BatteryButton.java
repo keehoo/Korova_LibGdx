@@ -4,9 +4,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
+import com.kree.keehoo.entities.Other.Stomach;
 
 public class BatteryButton extends AbstractIngredientButton {
 
@@ -17,7 +17,7 @@ public class BatteryButton extends AbstractIngredientButton {
     public final String value = "battery";
     private static final String BATTERY = "bateryjka_u103_normal.png";
 
-    public BatteryButton() {
+    public BatteryButton(final Stomach stomach) {
         super(new SpriteDrawable(new Sprite(new Texture(BATTERY))));
 
         setX(X);
@@ -29,9 +29,8 @@ public class BatteryButton extends AbstractIngredientButton {
         this.addListener(new ClickListener() {
                              @Override
                              public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                                 System.out.println("CLICKED OK STRAWBERRY");
-                                 System.out.println("X: " + x);
-                                 System.out.println("Y: " + y);
+                                 stomach.addIngredient(value);
+                                 System.out.println("Stomach size: "+stomach.size());
                                  return super.touchDown(event, x, y, pointer, button);
                              }
                          }
