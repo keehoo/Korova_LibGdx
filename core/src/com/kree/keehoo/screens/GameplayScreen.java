@@ -73,10 +73,8 @@ public class GameplayScreen extends AbstractScreen {
                 System.out.println("CLICKED OK BUTTON");
                 System.out.println("X: " + x);
                 System.out.println("Y: " + y);
-                if (!(x < 25 && y < 25)) {
-                    showPlama1();
-                    System.out.println("SUCCESS");
-                }
+
+
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
