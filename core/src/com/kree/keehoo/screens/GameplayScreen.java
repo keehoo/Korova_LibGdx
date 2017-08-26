@@ -64,11 +64,7 @@ public class GameplayScreen extends AbstractScreen {
 
     private void showPlama1() {
         Plama1 plama1 = new Plama1();
-        plama1.setX(MyGdxGame.WIDTH * 0.1f);
-        plama1.setY(MyGdxGame.HEIGHT* 0.6f);
         stage.addActor(plama1);
-        plama1.setZIndex(0);
-
     }
 
     private void initPlayer() {
