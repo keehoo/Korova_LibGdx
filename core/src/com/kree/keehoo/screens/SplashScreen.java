@@ -7,7 +7,7 @@ import com.kree.keehoo.MyGdxGame;
 
 public class SplashScreen extends AbstractScreen {
 
-    private static final int DELAY_SECONDS = 5;
+    private static final float DELAY_SECONDS = 0.5f;
     private Texture splashImage;
 
     public SplashScreen(final MyGdxGame game) {
