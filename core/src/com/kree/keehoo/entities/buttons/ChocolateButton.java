@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
-import com.kree.keehoo.MyGdxGame;
 import com.kree.keehoo.entities.Results.Constants;
 import com.kree.keehoo.screens.GameplayScreen;
 

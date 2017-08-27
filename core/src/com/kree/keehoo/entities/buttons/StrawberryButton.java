@@ -24,7 +24,7 @@ public class StrawberryButton extends AbstractIngredientButton {
         this.gameplayScreen = gameplayScreen;
         setX(X);
         setY(Y);
-        setDebug(true);
+        setDebug(Constants.DEBUG);
         setWidth(WIDTH);
         setHeight(HEIGHT);
         addButtonListener(gameplayScreen);
