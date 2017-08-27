@@ -6,20 +6,21 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
+import com.kree.keehoo.entities.Results.Constants;
 import com.kree.keehoo.screens.GameplayScreen;
 
-public class AtomButton extends AbstractIngredientButton {
+public class ChocolateButton extends AbstractIngredientButton {
 
-    private static final int WIDTH = 57;
+    private static final int WIDTH = 63;
     private static final int HEIGHT = 69;
     private static final int Y = 500;
-    static final int X = MyGdxGame.WIDTH - 100 - WIDTH;
-    public final String value = "atom";
-    private static final String ATOM = "atom_u97_normal.png";
+    private static final int X = AtomButton.X- Constants.HORIZONTAL_PADDING -WIDTH;
+    public final String value = "choco";
+    private static final String CHOCO = "czekolada_u93_normal.png";
 
 
-    public AtomButton(final GameplayScreen gameplayScreen) {
-        super(new SpriteDrawable(new Sprite(new Texture(ATOM))));
+    public ChocolateButton(final GameplayScreen gameplayScreen) {
+        super(new SpriteDrawable(new Sprite(new Texture(CHOCO))));
         this.gameplayScreen = gameplayScreen;
         setX(X);
         setY(Y);

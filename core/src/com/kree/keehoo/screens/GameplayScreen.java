@@ -53,7 +53,12 @@ public class GameplayScreen extends AbstractScreen {
         initStrawberry();
         initBattery();
         initAtom();
+        initChoco();
 
+    }
+
+    private void initChoco() {
+        stage.addActor(new ChocolateButton(this));
     }
 
     private void initAtom() {
