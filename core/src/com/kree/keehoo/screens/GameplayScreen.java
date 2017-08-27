@@ -3,6 +3,8 @@ package com.kree.keehoo.screens;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.Touchable;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
@@ -11,12 +13,7 @@ import com.kree.keehoo.entities.InstructionsMonit;
 import com.kree.keehoo.entities.Other.Stomach;
 import com.kree.keehoo.entities.Other.StomachComparator;
 import com.kree.keehoo.entities.Plama1;
-import com.kree.keehoo.entities.buttons.BatteryButton;
-import com.kree.keehoo.entities.buttons.GreenHandleButton;
-import com.kree.keehoo.entities.buttons.OkButton;
-import com.kree.keehoo.entities.buttons.StrawberryButton;
-
-import java.util.ArrayList;
+import com.kree.keehoo.entities.buttons.*;
 
 public class GameplayScreen extends AbstractScreen {
 
@@ -68,6 +65,7 @@ public class GameplayScreen extends AbstractScreen {
 
     private void initBackgroundImage() {
         background = new Image(new Texture("u85_normal.png"));
+        background.setTouchable(Touchable.disabled);
         stage.addActor(background);
     }
 
@@ -156,6 +154,37 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     public void showArrowAndGloveButton() {
+        showArrow();
+        showShakeMyHand();
+        showInvisibleButtonThatActuallyShowsTheFinalResult();
 
+    }
+
+    private void showInvisibleButtonThatActuallyShowsTheFinalResult() {
+        Button invisibleButton = new Button(new Button.ButtonStyle());
+        invisibleButton.setHeight(100);
+        invisibleButton.setWidth(100);
+        invisibleButton.setPosition(MyGdxGame.WIDTH - 360, MyGdxGame.HEIGHT - 600);
+        invisibleButton.setDebug(true);
+        stage.addActor(invisibleButton);
+
+        invisibleButton.addListener(new ClickListener() {
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                System.out.println("SHOW FINAL RESULT AND RESET THE GAME");
+                return super.touchDown(event, x, y, pointer, button);
+            }
+        });
+    }
+
+    private void showShakeMyHand() {
+        ShakeMyHandImage shakeMyHandImage = new ShakeMyHandImage();
+        stage.addActor(shakeMyHandImage);
+    }
+
+    private void showArrow() {
+        System.out.println("Should add arrow to the stage");
+        ArrowImage arrowImage = new ArrowImage();
+        stage.addActor(arrowImage);
     }
 }

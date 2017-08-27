@@ -15,7 +15,6 @@ public class GreenHandleButton extends Button {
     private static final int HEIGHT = 119;
     private static final int Y = 200;
     private static final int X = 560;
-    public final boolean value = false;
     private static final String GREEN_HANDLE = "u57_normal.png";
 
     public GreenHandleButton(final GameplayScreen gps) {
@@ -29,14 +28,11 @@ public class GreenHandleButton extends Button {
         this.addListener(new ClickListener() {
                              @Override
                              public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                                 System.out.println("CLICKED GREEN HANDLE");
-                                 System.out.println("X: " + x);
-                                 System.out.println("Y: " + y);
+                                 System.out.println("Should show arrow");
                                  gps.showArrowAndGloveButton();
                                  return super.touchDown(event, x, y, pointer, button);
                              }
                          }
         );
-
     }
 }
