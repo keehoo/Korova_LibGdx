@@ -21,6 +21,10 @@ public class GameplayScreen extends AbstractScreen {
 
     public Stomach stomach;
     private StomachComparator stomachComparator;
+    private ShakeMyHandImage shakeMyHandImage;
+    private ArrowImage arrowImage;
+    private Button invisibleButton;
+    private GreenHandleButton greenHandleButton;
 
     public GameplayScreen(MyGdxGame game) {
         super(game);
@@ -156,7 +160,28 @@ public class GameplayScreen extends AbstractScreen {
         resetGame();
     }
 
+    private void removeGreenStuff() {
+        if (greenHandleButton != null) {
+
+        greenHandleButton.remove();
+        }
+        if (arrowImage != null) {
+
+        arrowImage.remove();
+        }
+        if (invisibleButton != null) {
+
+        invisibleButton.remove();
+        }
+        if (shakeMyHandImage != null) {
+
+        shakeMyHandImage.remove();
+        }
+    }
+
     private void resetGame() {
+        removeGreenStuff();
+        stomach.emptyStomach();
 
     }
 
@@ -177,7 +202,7 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     private void showGreenHandleButton() {
-        GreenHandleButton greenHandleButton = new GreenHandleButton(this);
+        greenHandleButton = new GreenHandleButton(this);
         stage.addActor(greenHandleButton);
         greenHandleButton.setZIndex(0);
 
@@ -214,7 +239,8 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     private void showInvisibleButtonThatActuallyShowsTheFinalResult() {
-        Button invisibleButton = new Button(new Button.ButtonStyle());
+
+        invisibleButton = new Button(new Button.ButtonStyle());
         invisibleButton.setHeight(100);
         invisibleButton.setWidth(100);
         invisibleButton.setPosition(MyGdxGame.WIDTH - 360, MyGdxGame.HEIGHT - 600);
@@ -227,6 +253,7 @@ public class GameplayScreen extends AbstractScreen {
                 System.out.println("SHOW FINAL RESULT AND RESET THE GAME");
                 if (stomachComparator.result != null) {
                     stage.addActor(new Result(StomachComparator.result));
+                    resetGame();
                 }
                 return super.touchDown(event, x, y, pointer, button);
             }
@@ -234,13 +261,14 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     private void showShakeMyHand() {
-        ShakeMyHandImage shakeMyHandImage = new ShakeMyHandImage();
+        shakeMyHandImage = new ShakeMyHandImage();
         stage.addActor(shakeMyHandImage);
     }
 
     private void showArrow() {
         System.out.println("Should add arrow to the stage");
-        ArrowImage arrowImage = new ArrowImage();
+
+        arrowImage = new ArrowImage();
         stage.addActor(arrowImage);
     }
 }

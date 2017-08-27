@@ -47,6 +47,10 @@ public class Stomach {
         return stomach;
     }
 
+    public void emptyStomach() {
+        stomach.clear();
+    }
+
 
 
 
