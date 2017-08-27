@@ -125,7 +125,7 @@ public class GameplayScreen extends AbstractScreen {
     public void showPlama2() {
         plama2 = new Plama2();
         stage.addActor(plama2);
-        plama2.setZIndex(0);
+        plama2.setZIndex(1);
     }
 
     public void showPlama3() {
