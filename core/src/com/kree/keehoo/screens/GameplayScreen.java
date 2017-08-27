@@ -61,7 +61,7 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     private void initStrawberry() {
-        StrawberryButton strawberryButton = new StrawberryButton();
+        StrawberryButton strawberryButton = new StrawberryButton(this);
         stage.addActor(strawberryButton);
     }
 

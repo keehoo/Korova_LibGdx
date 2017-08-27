@@ -28,6 +28,8 @@ public class Stomach {
     }
 
     public boolean addIngredient(String ingredient) {
+        _debugPrint();
+        System.out.println(ingredient);
         return stomach.add(ingredient);
     }
 
@@ -35,7 +37,11 @@ public class Stomach {
         return stomach.size();
     }
 
-
+    public void _debugPrint() {
+        for (String s: stomach) {
+            System.out.println(s+"\n");
+        }
+    }
 
 
 
