@@ -34,7 +34,7 @@ public class AtomButton extends AbstractIngredientButton {
                              public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                                  if (gameplayScreen.stomach.size() != 4) {
                                      gameplayScreen.stomach.addIngredient(value);
-
+                                    updatePlamas();
                                      //debug info
                                      System.out.println("Stomach size: " + gameplayScreen.stomach.size());
                                  }

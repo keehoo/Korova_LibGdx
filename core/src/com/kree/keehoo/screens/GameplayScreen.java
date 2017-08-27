@@ -9,10 +9,10 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
-import com.kree.keehoo.entities.InstructionsMonit;
+import com.kree.keehoo.entities.*;
+import com.kree.keehoo.entities.Other.PlamaController;
 import com.kree.keehoo.entities.Other.Stomach;
 import com.kree.keehoo.entities.Other.StomachComparator;
-import com.kree.keehoo.entities.Plama1;
 import com.kree.keehoo.entities.Results.Constants;
 import com.kree.keehoo.entities.Results.Result;
 import com.kree.keehoo.entities.buttons.*;
@@ -25,6 +25,10 @@ public class GameplayScreen extends AbstractScreen {
     private ArrowImage arrowImage;
     private Button invisibleButton;
     private GreenHandleButton greenHandleButton;
+    public Plama1 plama1;
+    public Plama2 plama2;
+    public Plama3 plama3;
+    public Plama4 plama4;
 
     public GameplayScreen(MyGdxGame game) {
         super(game);
@@ -112,12 +116,29 @@ public class GameplayScreen extends AbstractScreen {
         stage.addActor(background);
     }
 
-    private void showPlama1() {
-        Plama1 plama1 = new Plama1();
+    public void showPlama1() {
+        plama1 = new Plama1();
         stage.addActor(plama1);
         plama1.setZIndex(0);
     }
 
+    public void showPlama2() {
+        plama2 = new Plama2();
+        stage.addActor(plama2);
+        plama2.setZIndex(0);
+    }
+
+    public void showPlama3() {
+        plama3 = new Plama3();
+        stage.addActor(plama3);
+        plama3.setZIndex(0);
+    }
+
+    public void showPlama4() {
+        plama4 = new Plama4();
+        stage.addActor(plama4);
+        plama4.setZIndex(0);
+    }
 
     private void initOkButton() {
         Sprite sprite = new Sprite(new Texture("u105_normal.png"));
@@ -182,6 +203,7 @@ public class GameplayScreen extends AbstractScreen {
     private void resetGame() {
         removeGreenStuff();
         stomach.emptyStomach();
+        new PlamaController(this).clearAllPlamas();
 
     }
 

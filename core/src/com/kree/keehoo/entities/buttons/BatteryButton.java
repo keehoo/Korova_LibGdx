@@ -18,7 +18,6 @@ public class BatteryButton extends AbstractIngredientButton {
     private static final String BATTERY = "bateryjka_u103_normal.png";
 
 
-
     public BatteryButton(final GameplayScreen gameplayScreen) {
         super(new SpriteDrawable(new Sprite(new Texture(BATTERY))));
         this.gameplayScreen = gameplayScreen;
@@ -36,9 +35,8 @@ public class BatteryButton extends AbstractIngredientButton {
                              public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                                  if (gameplayScreen.stomach.size() != 4) {
                                      gameplayScreen.stomach.addIngredient(value);
-                                     System.out.println("Stomach size: " + gameplayScreen.stomach.size());
-                                 }
-                                 else {
+                                     updatePlamas();
+                                 } else {
                                      showFifthChamberNotInstalled();
                                  }
                                  return super.touchDown(event, x, y, pointer, button);

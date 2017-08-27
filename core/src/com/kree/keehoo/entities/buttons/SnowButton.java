@@ -14,10 +14,9 @@ public class SnowButton extends AbstractIngredientButton {
     private static final int WIDTH = 54;
     private static final int HEIGHT = 56;
     private static final int Y = 500;
-    static final int X = PepperButton.X- Constants.HORIZONTAL_PADDING -WIDTH;
+    static final int X = PepperButton.X - Constants.HORIZONTAL_PADDING - WIDTH;
     public final String value = "snow";
     private static final String TEXTURE_PATH = "johnsnow_u95_normal.png";
-
 
 
     public SnowButton(final GameplayScreen gameplayScreen) {
@@ -39,9 +38,8 @@ public class SnowButton extends AbstractIngredientButton {
                                      gameplayScreen.stomach.addIngredient(value);
 
                                      //debug info
-                                     System.out.println("Stomach size: " + gameplayScreen.stomach.size());
-                                 }
-                                 else {
+                                     updatePlamas();
+                                 } else {
                                      showFifthChamberNotInstalled();
                                  }
                                  return super.touchDown(event, x, y, pointer, button);

@@ -37,9 +37,8 @@ public class CloudButton extends AbstractIngredientButton {
                                      gameplayScreen.stomach.addIngredient(value);
 
                                      //debug info
-                                     System.out.println("Stomach size: " + gameplayScreen.stomach.size());
-                                 }
-                                 else {
+                                     updatePlamas();
+                                 } else {
                                      showFifthChamberNotInstalled();
                                  }
                                  return super.touchDown(event, x, y, pointer, button);

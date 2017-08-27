@@ -13,7 +13,7 @@ public class ChocolateButton extends AbstractIngredientButton {
     private static final int WIDTH = 63;
     private static final int HEIGHT = 69;
     private static final int Y = 500;
-    static final int X = AtomButton.X- Constants.HORIZONTAL_PADDING -WIDTH;
+    static final int X = AtomButton.X - Constants.HORIZONTAL_PADDING - WIDTH;
     public final String value = "choco";
     private static final String CHOCO = "czekolada_u93_normal.png";
 
@@ -36,9 +36,8 @@ public class ChocolateButton extends AbstractIngredientButton {
                                      gameplayScreen.stomach.addIngredient(value);
 
                                      //debug info
-                                     System.out.println("Stomach size: " + gameplayScreen.stomach.size());
-                                 }
-                                 else {
+                                     updatePlamas();
+                                 } else {
                                      showFifthChamberNotInstalled();
                                  }
                                  return super.touchDown(event, x, y, pointer, button);

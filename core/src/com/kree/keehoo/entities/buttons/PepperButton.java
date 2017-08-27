@@ -37,8 +37,7 @@ public class PepperButton extends AbstractIngredientButton{
                                      gameplayScreen.stomach.addIngredient(value);
 
                                      //debug info
-                                     System.out.println("Stomach size: " + gameplayScreen.stomach.size());
-                                 }
+updatePlamas();                                 }
                                  else {
                                      showFifthChamberNotInstalled();
                                  }
