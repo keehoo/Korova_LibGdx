@@ -11,7 +11,7 @@ public class ArrowImage extends Image{
 
     private static final int WIDTH = 104;
     private static final int HEIGHT = 20;
-    private static final int Y = MyGdxGame.HEIGHT - 550;
+    private static final int Y = MyGdxGame.HEIGHT - 600;
     private static final int X = MyGdxGame.WIDTH - 250;
 
 

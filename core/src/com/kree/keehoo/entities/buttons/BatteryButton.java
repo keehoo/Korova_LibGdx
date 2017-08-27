@@ -6,7 +6,6 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.MyGdxGame;
-import com.kree.keehoo.entities.Other.Stomach;
 import com.kree.keehoo.screens.GameplayScreen;
 
 public class BatteryButton extends AbstractIngredientButton {
@@ -18,7 +17,6 @@ public class BatteryButton extends AbstractIngredientButton {
     public final String value = "battery";
     private static final String BATTERY = "bateryjka_u103_normal.png";
 
-    private GameplayScreen gameplayScreen;
 
 
     public BatteryButton(final GameplayScreen gameplayScreen) {
@@ -29,7 +27,11 @@ public class BatteryButton extends AbstractIngredientButton {
         setDebug(true);
         setWidth(WIDTH);
         setHeight(HEIGHT);
+        addButtonListener(gameplayScreen);
 
+    }
+
+    private void addButtonListener(final GameplayScreen gameplayScreen) {
         this.addListener(new ClickListener() {
                              @Override
                              public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
@@ -47,12 +49,5 @@ public class BatteryButton extends AbstractIngredientButton {
 
 
         );
-
-    }
-
-    private void showFifthChamberNotInstalled() {
-        gameplayScreen.fifthChamberNotInstalled();
-        System.out.println("Stomach size" + gameplayScreen.stomach.size());
-
     }
 }
