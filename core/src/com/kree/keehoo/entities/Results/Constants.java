@@ -32,4 +32,7 @@ public class Constants {
     public static final List<String> nuka_cola = new ArrayList<String>(Arrays.asList( "daisy", "atom", "snow", "battery" ));
     public static final List<String> on_the_beach = new ArrayList<String>(Arrays.asList("atom", "atom", "atom", "atom" ));
     public static final List<String> molloko_velocet = new ArrayList<String>(Arrays.asList("daisy", "cloud", "battery", "atom"));
+    public static final String FAT_MILK = "u45_normal.png";
+    public static final String CREAM = "u30_normal.png";
+
 }
