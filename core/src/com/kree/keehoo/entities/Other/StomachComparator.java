@@ -31,35 +31,9 @@ public class StomachComparator {
 
     public boolean compare(Stomach stomach) {
 
-        stomach._debugPrint();
-        System.out.println("skinny milk : \n\n");
-        for (String s: Constants.skinny_milk) {
-            System.out.println(s);
-        }
+        return checkIfStomachContentIsAnyOftheResult(stomach.getStomachConent());
 
-        List<String> actualStomachContent = stomach.getStomachConent();
-        Collections.sort(actualStomachContent);
 
-        for (int i = 0; i < actualStomachContent.size(); i++) {
-            getSortedResultsCollections();
-            if (actualStomachContent.get(i).equals(skinnyMilk.get(i))) {
-                System.out.println(stomach.getStomachConent().get(i) + "  ==  "+ skinnyMilk.get(i));
-                result = Constants.SKINNY_MILK;
-                return true;
-            }
-            if (actualStomachContent.get(i).equals(fatMilk.get(i))) {
-                System.out.println(stomach.getStomachConent().get(i) + "  ==  "+ fatMilk.get(i));
-
-                result = Constants.FAT_MILK;
-                return true;
-            }
-            if (actualStomachContent.get(i).equals(cream.get(i))) {
-                System.out.println(stomach.getStomachConent().get(i) + "  ==  "+ cream.get(i));
-                result = Constants.CREAM;
-                return true;
-            }
-        }
-        return false;
     }
 
     private void getSortedResultsCollections() {
@@ -97,12 +71,7 @@ public class StomachComparator {
 
     }
 
-    private ArrayList<String> getsortedList(ArrayList<String> list) {
-        Collections.sort(list);
-        return list;
-    }
-
-    private String checkIfStomachContentIsAnyOftheResult(List<String> stomachContent) {
+    private boolean checkIfStomachContentIsAnyOftheResult(List<String> stomachContent) {
         Collections.sort(stomachContent);
         getSortedResultsCollections();
 
@@ -111,9 +80,124 @@ public class StomachComparator {
                 && stomachContent.get(2).equals(skinnyMilk.get(2))
                 && stomachContent.get(3).equals(skinnyMilk.get(3))) {
             result = Constants.SKINNY_MILK;
-            return Constants.SKINNY_MILK;
+            return true;
         }
-        return null;
+
+        if (stomachContent.get(0).equals(fatMilk.get(0))
+                && stomachContent.get(1).equals(fatMilk.get(1))
+                && stomachContent.get(2).equals(fatMilk.get(2))
+                && stomachContent.get(3).equals(fatMilk.get(3))) {
+            result = Constants.FAT_MILK;
+            return true;
+        }
+
+        if (stomachContent.get(0).equals(cream.get(0))
+                && stomachContent.get(1).equals(cream.get(1))
+                && stomachContent.get(2).equals(cream.get(2))
+                && stomachContent.get(3).equals(cream.get(3))) {
+            result = Constants.CREAM;
+            return true;
+        }
+
+        if (stomachContent.get(0).equals(electricMilk.get(0))
+                && stomachContent.get(1).equals(electricMilk.get(1))
+                && stomachContent.get(2).equals(electricMilk.get(2))
+                && stomachContent.get(3).equals(electricMilk.get(3))) {
+            result = Constants.ELECTRIC_MILK;
+            return true;
+        }
+
+        if (stomachContent.get(0).equals(hotMilk.get(0))
+                && stomachContent.get(1).equals(hotMilk.get(1))
+                && stomachContent.get(2).equals(hotMilk.get(2))
+                && stomachContent.get(3).equals(hotMilk.get(3))) {
+            result = Constants.HOT_MILK;
+            return true;
+        }
+
+        if (stomachContent.get(0).equals(cocoa.get(0))
+                && stomachContent.get(1).equals(cocoa.get(1))
+                && stomachContent.get(2).equals(cocoa.get(2))
+                && stomachContent.get(3).equals(cocoa.get(3))) {
+            result = Constants.COCOA;
+            return true;
+        }
+
+
+        if (stomachContent.get(0).equals(hotChoco.get(0))
+                && stomachContent.get(1).equals(hotChoco.get(1))
+                && stomachContent.get(2).equals(hotChoco.get(2))
+                && stomachContent.get(3).equals(hotChoco.get(3))) {
+            result = Constants.HOT_CHOCO;
+            return true;
+        }
+
+        if (stomachContent.get(0).equals(actec.get(0))
+                && stomachContent.get(1).equals(actec.get(1))
+                && stomachContent.get(2).equals(actec.get(2))
+                && stomachContent.get(3).equals(actec.get(3))) {
+            result = Constants.AZTEC;
+            return true;
+        }
+
+
+        if (stomachContent.get(0).equals(milkShake.get(0))
+                && stomachContent.get(1).equals(milkShake.get(1))
+                && stomachContent.get(2).equals(milkShake.get(2))
+                && stomachContent.get(3).equals(milkShake.get(3))) {
+            result = Constants.MILK_SHAKE;
+            return true;
+        }
+
+
+        if (stomachContent.get(0).equals(chocoShake.get(0))
+                && stomachContent.get(1).equals(chocoShake.get(1))
+                && stomachContent.get(2).equals(chocoShake.get(2))
+                && stomachContent.get(3).equals(chocoShake.get(3))) {
+            result = Constants.CHOCO_SHAKE;
+            return true;
+        }
+
+
+        if (stomachContent.get(0).equals(strawberryShake.get(0))
+                && stomachContent.get(1).equals(strawberryShake.get(1))
+                && stomachContent.get(2).equals(strawberryShake.get(2))
+                && stomachContent.get(3).equals(strawberryShake.get(3))) {
+            result = Constants.STRAWBERRY_SHAKE;
+            return true;
+        }
+
+        if (stomachContent.get(0).equals(grog.get(0))
+                && stomachContent.get(1).equals(grog.get(1))
+                && stomachContent.get(2).equals(grog.get(2))
+                && stomachContent.get(3).equals(grog.get(3))) {
+            result = Constants.GROG;
+            return true;
+        }
+
+        if (stomachContent.get(0).equals(nuka.get(0))
+                && stomachContent.get(1).equals(nuka.get(1))
+                && stomachContent.get(2).equals(nuka.get(2))
+                && stomachContent.get(3).equals(nuka.get(3))) {
+            result = Constants.NUKA;
+            return true;
+        }
+        if (stomachContent.get(0).equals(beach.get(0))
+                && stomachContent.get(1).equals(beach.get(1))
+                && stomachContent.get(2).equals(beach.get(2))
+                && stomachContent.get(3).equals(beach.get(3))) {
+            result = Constants.BEACH;
+            return true;
+        }
+        if (stomachContent.get(0).equals(velocet.get(0))
+                && stomachContent.get(1).equals(velocet.get(1))
+                && stomachContent.get(2).equals(velocet.get(2))
+                && stomachContent.get(3).equals(velocet.get(3))) {
+            result = Constants.VELOCET;
+            return true;
+        }
+
+        return false;
 
 
 

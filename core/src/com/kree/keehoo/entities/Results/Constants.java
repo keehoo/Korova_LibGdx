@@ -34,5 +34,21 @@ public class Constants {
     public static final List<String> molloko_velocet = new ArrayList<String>(Arrays.asList("daisy", "cloud", "battery", "atom"));
     public static final String FAT_MILK = "u45_normal.png";
     public static final String CREAM = "u30_normal.png";
+    public static final String ELECTRIC_MILK = "u15_normal.png";
 
+    public static final String HOT_MILK = "error - no graphoc"; // TODO: add graphic
+
+
+    public static final String COCOA = "u39_normal.png";
+    public static final String HOT_CHOCO = "u36_normal.png";
+    public static final String AZTEC = "u33_normal.png";
+    public static final String MILK_SHAKE = "u27_normal.png";
+    public static final String CHOCO_SHAKE = "u21_normal.png";
+    public static final String STRAWBERRY_SHAKE = "u24_normal.png";
+    public static final String GROG = "u18_normal.png";
+    public static final String NUKA = "u6_normal.png";
+
+    public static final String BEACH = "u9_normal.png";
+
+    public static final String VELOCET = "u12_normal.png";
 }
