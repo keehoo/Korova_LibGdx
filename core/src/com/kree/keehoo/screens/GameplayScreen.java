@@ -56,7 +56,12 @@ public class GameplayScreen extends AbstractScreen {
         initChoco();
         initPepper();
         initSnow();
+        initClover();
 
+    }
+
+    private void initClover() {
+        stage.addActor(new CloverButton(this));
     }
 
     private void initSnow() {
