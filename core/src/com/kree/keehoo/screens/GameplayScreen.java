@@ -13,6 +13,8 @@ import com.kree.keehoo.entities.InstructionsMonit;
 import com.kree.keehoo.entities.Other.Stomach;
 import com.kree.keehoo.entities.Other.StomachComparator;
 import com.kree.keehoo.entities.Plama1;
+import com.kree.keehoo.entities.Results.Constants;
+import com.kree.keehoo.entities.Results.Result;
 import com.kree.keehoo.entities.buttons.*;
 
 public class GameplayScreen extends AbstractScreen {
@@ -54,7 +56,7 @@ public class GameplayScreen extends AbstractScreen {
     }
 
     private void initBattery() {
-        BatteryButton batteryButton = new BatteryButton(getStomach());
+        BatteryButton batteryButton = new BatteryButton(this);
         stage.addActor(batteryButton);
     }
 
@@ -109,12 +111,14 @@ public class GameplayScreen extends AbstractScreen {
         });
     }
 
-    private void fifthChamberNotInstalled() {
-
+    public void fifthChamberNotInstalled() {
+        Result not_full_yet = new Result(Constants.FIFTH_CHAMBER_NOT_INSTALLED);
+        stage.addActor(not_full_yet);
     }
 
     private void showStomachNotFullYet() {
-
+        Result not_full_yet = new Result(Constants.STOMACH_NOT_FULL_YET);
+        stage.addActor(not_full_yet);
     }
 
     private void showResult() {
