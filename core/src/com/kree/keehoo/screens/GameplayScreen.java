@@ -58,7 +58,13 @@ public class GameplayScreen extends AbstractScreen {
         initSnow();
         initClover();
         initCloud();
+        initDaisy();
 
+
+    }
+
+    private void initDaisy() {
+        stage.addActor(new DaisyButton(this));
     }
 
     private void initCloud() {
