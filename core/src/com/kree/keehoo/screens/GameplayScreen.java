@@ -131,13 +131,13 @@ public class GameplayScreen extends AbstractScreen {
     public void showPlama3() {
         plama3 = new Plama3();
         stage.addActor(plama3);
-        plama3.setZIndex(0);
+        plama3.setZIndex(2);
     }
 
     public void showPlama4() {
         plama4 = new Plama4();
         stage.addActor(plama4);
-        plama4.setZIndex(0);
+        plama4.setZIndex(3);
     }
 
     private void initOkButton() {

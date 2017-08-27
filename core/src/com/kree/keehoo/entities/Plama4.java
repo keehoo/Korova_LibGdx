@@ -13,8 +13,8 @@ public class Plama4 extends
     public Plama4() {
         super(new Texture(U_65_NORMAL));
 
-        this.setX(MyGdxGame.WIDTH * 0.1f);
-        this.setY(MyGdxGame.HEIGHT * 0.6f);
+        this.setX(MyGdxGame.WIDTH * 0.03f);
+        this.setY(MyGdxGame.HEIGHT * 0.3f);
         this.setZIndex(0);
     }
 

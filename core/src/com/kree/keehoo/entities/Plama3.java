@@ -11,8 +11,8 @@ public class Plama3 extends Image {
     public Plama3() {
         super(new Texture(U_65_NORMAL));
 
-        this.setX(MyGdxGame.WIDTH * 0.1f);
-        this.setY(MyGdxGame.HEIGHT * 0.6f);
+        this.setX(MyGdxGame.WIDTH * 0.08f);
+        this.setY(MyGdxGame.HEIGHT * 0.29f);
         this.setZIndex(0);
     }
 
