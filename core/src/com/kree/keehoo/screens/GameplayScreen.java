@@ -244,7 +244,7 @@ public class GameplayScreen extends AbstractScreen {
         invisibleButton.setHeight(100);
         invisibleButton.setWidth(100);
         invisibleButton.setPosition(MyGdxGame.WIDTH - 360, MyGdxGame.HEIGHT - 600);
-        invisibleButton.setDebug(true);
+        invisibleButton.setDebug(Constants.DEBUG);
         stage.addActor(invisibleButton);
 
         invisibleButton.addListener(new ClickListener() {

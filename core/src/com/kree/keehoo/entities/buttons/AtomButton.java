@@ -23,7 +23,6 @@ public class AtomButton extends AbstractIngredientButton {
         this.gameplayScreen = gameplayScreen;
         setX(X);
         setY(Y);
-        setDebug(true);
         setWidth(WIDTH);
         setHeight(HEIGHT);
         addButtonListener(gameplayScreen);

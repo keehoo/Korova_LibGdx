@@ -24,7 +24,6 @@ public class CloverButton extends AbstractIngredientButton {
         this.gameplayScreen = gameplayScreen;
         setX(X);
         setY(Y);
-        setDebug(Constants.DEBUG);
         setWidth(WIDTH);
         setHeight(HEIGHT);
         addButtonListener(gameplayScreen);
