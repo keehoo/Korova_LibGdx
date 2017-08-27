@@ -57,7 +57,12 @@ public class GameplayScreen extends AbstractScreen {
         initPepper();
         initSnow();
         initClover();
+        initCloud();
 
+    }
+
+    private void initCloud() {
+        stage.addActor(new CloudButton(this));
     }
 
     private void initClover() {

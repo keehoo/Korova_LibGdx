@@ -8,18 +8,18 @@ import com.badlogic.gdx.scenes.scene2d.utils.SpriteDrawable;
 import com.kree.keehoo.entities.Results.Constants;
 import com.kree.keehoo.screens.GameplayScreen;
 
-public class CloverButton extends AbstractIngredientButton {
+public class CloudButton extends AbstractIngredientButton {
 
 
-    private static final int WIDTH = 58;
-    private static final int HEIGHT = 56;
+    private static final int WIDTH = 126;
+    private static final int HEIGHT = 69;
     private static final int Y = 500;
-    static final int X = StrawberryButton.X - Constants.HORIZONTAL_PADDING - WIDTH;
-    public final String value = "clover";
-    private static final String TEXTURE = "koni.png";
+    static final int X = CloverButton.X - Constants.HORIZONTAL_PADDING - WIDTH;
+    public final String value = "cloud";
+    private static final String TEXTURE = "chmura_u91_normal.png";
 
 
-    public CloverButton(final GameplayScreen gameplayScreen) {
+    public CloudButton(final GameplayScreen gameplayScreen) {
         super(new SpriteDrawable(new Sprite(new Texture(TEXTURE))));
         this.gameplayScreen = gameplayScreen;
         setX(X);
