@@ -54,7 +54,12 @@ public class GameplayScreen extends AbstractScreen {
         initBattery();
         initAtom();
         initChoco();
+        initPepper();
 
+    }
+
+    private void initPepper() {
+        stage.addActor(new PepperButton(this));
     }
 
     private void initChoco() {

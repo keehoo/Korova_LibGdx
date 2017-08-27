@@ -9,18 +9,18 @@ import com.kree.keehoo.MyGdxGame;
 import com.kree.keehoo.entities.Results.Constants;
 import com.kree.keehoo.screens.GameplayScreen;
 
-public class ChocolateButton extends AbstractIngredientButton {
+public class PepperButton extends AbstractIngredientButton{
 
-    private static final int WIDTH = 63;
+    private static final int WIDTH = 57;
     private static final int HEIGHT = 69;
     private static final int Y = 500;
-    static final int X = AtomButton.X- Constants.HORIZONTAL_PADDING -WIDTH;
-    public final String value = "choco";
-    private static final String CHOCO = "czekolada_u93_normal.png";
+    static final int X = ChocolateButton.X - Constants.HORIZONTAL_PADDING - WIDTH;
+    public final String value = "pepper";
+    private static final String ATOM = "red_hot_u101_normal.png";
 
 
-    public ChocolateButton(final GameplayScreen gameplayScreen) {
-        super(new SpriteDrawable(new Sprite(new Texture(CHOCO))));
+    public PepperButton(final GameplayScreen gameplayScreen) {
+        super(new SpriteDrawable(new Sprite(new Texture(ATOM))));
         this.gameplayScreen = gameplayScreen;
         setX(X);
         setY(Y);
