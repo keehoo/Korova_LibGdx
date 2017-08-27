@@ -43,6 +43,10 @@ public class Stomach {
         }
     }
 
+    public List<String> getStomachConent() {
+        return stomach;
+    }
+
 
 
 

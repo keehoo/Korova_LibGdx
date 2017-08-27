@@ -40,6 +40,7 @@ public class GameplayScreen extends AbstractScreen {
         System.out.println("Initializing stomach");
         stomach = new Stomach();
         stomachComparator = new StomachComparator();
+        String actualResult;
     }
 
     private void showInstructions() {
@@ -127,8 +128,11 @@ public class GameplayScreen extends AbstractScreen {
                 switch (stomach.isStomachFull()) {
                     case 0:
                         System.out.println("Stomach is full, show result!");
-                        if (stomachComparator.compare()) {
+                        if (stomachComparator.compare(stomach)) {
                             showResult();
+                        }
+                        else {
+                            showMixtureDidNotDigestWell();
                         }
                         break;
                     case 1:
@@ -145,6 +149,15 @@ public class GameplayScreen extends AbstractScreen {
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
+    }
+
+    private void showMixtureDidNotDigestWell() {
+        stage.addActor(new Result(Constants.NOT_DIGESTED));
+        resetGame();
+    }
+
+    private void resetGame() {
+
     }
 
     public void fifthChamberNotInstalled() {
@@ -212,6 +225,9 @@ public class GameplayScreen extends AbstractScreen {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 System.out.println("SHOW FINAL RESULT AND RESET THE GAME");
+                if (stomachComparator.result != null) {
+                    stage.addActor(new Result(StomachComparator.result));
+                }
                 return super.touchDown(event, x, y, pointer, button);
             }
         });

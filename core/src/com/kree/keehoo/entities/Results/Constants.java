@@ -8,12 +8,15 @@ public class Constants {
 
     public static final String STOMACH_NOT_FULL_YET = "u2_normal.png";
     public static final String FIFTH_CHAMBER_NOT_INSTALLED = "u60_normal.png";
+    public static final String NOT_DIGESTED = "u52_normal.png";
     public static final int HORIZONTAL_PADDING = 15;
     public static final boolean DEBUG = true;
 
+    public static final String SKINNY_MILK = "u48_normal.png";
 
 
-    public static final List<String> listOfString = new ArrayList<String>(Arrays.asList("daisy", "daisy", "clover", "cloud"));
+
+   // public static final List<String> listOfString = new ArrayList<String>(Arrays.asList("daisy", "daisy", "clover", "cloud"));
     public static final List<String> skinny_milk = new ArrayList<String>(Arrays.asList( "daisy", "daisy", "clover", "cloud" ));
     public static final List<String> fat_milk = new ArrayList<String>(Arrays.asList( "daisy", "clover", "clover", "cloud"));
     public static final List<String> cream = new ArrayList<String>(Arrays.asList( "daisy", "clover", "cloud", "cloud"));
