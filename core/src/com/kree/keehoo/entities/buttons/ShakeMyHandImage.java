@@ -10,8 +10,8 @@ public class ShakeMyHandImage extends Image {
 
     private static final int WIDTH = 96;
     private static final int HEIGHT = 17;
-    private static final int Y = MyGdxGame.HEIGHT - 400 - HEIGHT;
-    private static final int X = MyGdxGame.WIDTH - 300;
+    private static final int Y = MyGdxGame.HEIGHT - 550 - HEIGHT;
+    private static final int X = MyGdxGame.WIDTH - 250;
 
 
     public ShakeMyHandImage() {
