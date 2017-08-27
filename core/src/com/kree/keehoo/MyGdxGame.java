@@ -23,7 +23,7 @@ public class MyGdxGame extends Game {
     @Override
     public void create() {
         this.setScreen(new SplashScreen(this));
-        music_level1 = Gdx.audio.newMusic(Gdx.files.internal("funeral.ogg"));
+        music_level1 = Gdx.audio.newMusic(Gdx.files.internal("music.mp3"));
         music_level1.setLooping(true);
         music_level1.play();
     }
